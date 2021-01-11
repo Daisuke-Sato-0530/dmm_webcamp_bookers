@@ -1,0 +1,13 @@
+<h1>EditingBook</h1>
+
+<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+<h4>タイトル</h4>
+<%= f.text_field :title %>
+<h4>本文</h4>
+<%= f.text_area :body %>
+<%= f.submit "保存" %>
+
+<%= link_to "show", show_room_path(@book.id) %>
+<%= link_to "back", main_page_path %>
+
+<% end %>
