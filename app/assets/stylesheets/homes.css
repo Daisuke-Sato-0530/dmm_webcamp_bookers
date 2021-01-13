@@ -1,0 +1,89 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.margin {
+  margin: 33px;
+}
+
+.honbun {
+  margin: 27px;
+}
+
+.index_head {
+  display: flex;
+}
+
+.index_title {
+  width:20%;
+  text-align:center;
+}
+
+.index_body {
+  width:50%;
+  text-align:center;
+}
+
+.index_main {
+  width:100%;
+}
+
+
+
+.book_title {
+  width:20%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.book_body {
+  width:50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.links {
+  margin: 0 5px;
+}
+
+.show {
+  margin: 0 33px 40px;
+  display: flex;
+}
+
+.show_links {
+  display: flex;
+}
+
+.update_button {
+  margin: 5px 0;
+}
+
+.error_title{
+  color:white;
+  background-color: red;
+}
+
+#error_explanation {
+  width: 500px;
+  border: solid 1px red;
+}
+
+.error_list{
+  list-style-position: inside;
+}
+
+.error_msg_box {
+  padding:50px;
+  text-align: center;
+}
+
+.notice{
+  margin:30px 50px;
+  color: green;
+}
