@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'books' => 'homes#index', as: 'main_page'
 
   post 'books' => 'homes#create'
-  get 'books/:id' => 'homes#show', as: 'show_room'
+  get 'books/:id' => 'homes#show', as: 'book'
   patch 'books/:id' => 'homes#update', as: 'update_book'
-  get 'books/:id/edit' => 'homes#edit', as: 'edit_room'
+  get 'books/:id/edit' => 'homes#edit', as: 'edit_book'
   delete 'books/:id' => 'homes#destroy', as: 'destroy_book'
 end

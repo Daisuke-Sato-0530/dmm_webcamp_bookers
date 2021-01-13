@@ -10,7 +10,7 @@ class HomesController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to show_room_path(@book.id), notice: "successfully"
+      redirect_to book_path(@book.id), notice: "successfully"
     else
       @books = Book.all
       render :index
@@ -33,7 +33,7 @@ class HomesController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-    redirect_to show_room_path(@book.id,), notice: "successfully"
+    redirect_to book_path(@book.id,), notice: "successfully"
     else
       render :edit
     end
