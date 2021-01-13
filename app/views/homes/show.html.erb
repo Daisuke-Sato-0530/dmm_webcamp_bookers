@@ -1,4 +1,17 @@
-<h4>Title</h4><%= @book.title %>
+<p class = "notice"><%= notice %></p>
 
-<%= link_to "edit", edit_room_path(@book.id) %>
-<%= link_to "back", main_page_path %>
+<div class = "margin">
+
+    <div class = "show">
+        <h4 class = "show_title">Title:</h4><%= @book.title %>
+    </div>
+
+    <div class = "show">
+        <h4 class = "show_body">Body:</h4><%= @book.body %>
+    </div>
+    <div class = "show_links">
+        <%= link_to "Edit", edit_book_path(@book.id) %>
+        <p>|</p>
+        <%= link_to "Back", main_page_path %>
+    </div>
+</div>

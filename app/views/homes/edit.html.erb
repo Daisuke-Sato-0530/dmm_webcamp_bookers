@@ -1,13 +1,33 @@
-<h1>EditingBook</h1>
+<div class = "margin">
 
-<%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
-<h4>タイトル</h4>
-<%= f.text_field :title %>
-<h4>本文</h4>
-<%= f.text_area :body %>
-<%= f.submit "保存" %>
+    <h1>EditingBook</h1>
 
-<%= link_to "show", show_room_path(@book.id) %>
-<%= link_to "back", main_page_path %>
+    <%= form_with model:@book, url:"/books/#{@book.id}", local:true do |f| %>
+        <% if @book.errors.any? %>
+            <div id="error_explanation">
+                <ul class = "error_list">
+                    <h4 class = "error_title"><%= pluralize(@book.errors.count, "error") %> prohibited this map from being saved:</h2>
 
-<% end %>
+                    <% @book.errors.full_messages.each do |message| %>
+                        <li class="error_msg"><%= message %></li>
+                    <% end %>
+
+                </ul>
+            </div>
+        <% end %>
+
+        <h4>Title</h4>
+        <%= f.text_field :title %>
+        <h4>Body</h4>
+        <%= f.text_area :body %>
+        <div class = "update_button">
+            <%= f.submit "Update Book" %>
+        </div>
+        <div class = "show_links">
+            <%= link_to "show", book_path(@book.id) %>
+            <p>|</p>
+            <%= link_to "back", main_page_path %>
+        </div>
+    <% end %>
+
+</div>
